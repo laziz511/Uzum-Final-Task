@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -27,13 +28,13 @@ public class ConversionLog {
     private String toCurrency;
 
     @Column(name = "amount", nullable = false)
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(name = "converted_amount", nullable = false)
-    private Double convertedAmount;
+    private BigDecimal convertedAmount;
 
     @Column(name = "commission_amount", nullable = false)
-    private Double commissionAmount;
+    private BigDecimal commissionAmount;
 
     @Column(name = "conversion_date", nullable = false)
     private LocalDateTime conversionDate;
