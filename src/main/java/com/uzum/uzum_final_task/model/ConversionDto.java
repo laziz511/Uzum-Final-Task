@@ -12,5 +12,5 @@ import lombok.Setter;
 public class ConversionDto {
     private String from;
     private String to;
-    private Double amount;
+    private String amount;
 }
