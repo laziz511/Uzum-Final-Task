@@ -19,3 +19,8 @@ server:
 logging:
   level:
     root: info
+
+secret:
+  key:
+    file:
+      path: secret-key-file.txt
