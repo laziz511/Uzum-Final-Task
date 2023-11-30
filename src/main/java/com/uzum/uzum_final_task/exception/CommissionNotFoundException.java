@@ -1,8 +1,10 @@
 package com.uzum.uzum_final_task.exception;
 
-import java.util.NoSuchElementException;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-public class CommissionNotFoundException extends NoSuchElementException {
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class CommissionNotFoundException extends RuntimeException {
     public CommissionNotFoundException(String message) {
         super(message);
     }
