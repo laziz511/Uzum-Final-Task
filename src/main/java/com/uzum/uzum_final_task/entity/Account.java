@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
@@ -20,6 +22,6 @@ public class Account {
     @Column(name = "currency_name", nullable = false, length = 3)
     private String currencyName;
 
-    @Column(name = "amount", nullable = false)
-    private Double amount;
+    @Column(name = "amount", nullable = false, precision = 38, scale = 6)
+    private BigDecimal amount;
 }
