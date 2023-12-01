@@ -2,7 +2,8 @@
 
 
 **Task:**
-- Write a currency converter. It must convert the currency taking into account the current exchange rate (for the day) and the agent commission.
+- Write a currency converter.
+- It must convert the currency taking into account the current exchange rate (for the day) and the agent commission.
 
 
 
