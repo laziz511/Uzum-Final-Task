@@ -1,25 +1,30 @@
 # Currency Converter
 
+
 **Task:**
-- Write a currency converter. The converter must translate the currency taking into account the current exchange rate (for the day) and the agent commission.
+- Write a currency converter. It must convert the currency taking into account the current exchange rate (for the day) and the agent commission.
+
+
 
 **Project requirements:**
 - As a source of currency data, following sources are used:
     - https://cbu.uz/ru/arkhiv-kursov-valyut/
     - https://cbu.uz/ru/arkhiv-kursov-valyut/json/all/2021-12-11/
-- Use **Postgresql** for storage.
-- Use **Java Spring** for backend.
+- Use **Postgresql** for storage
+- Use **Java Spring** for backend
 - When the service starts, the currency in the database should be updated to the current day
-- GET methods return JSON
-- POST methods accept JSON
+- **GET** methods return JSON
+- **POST** methods accept JSON
 - The **secret key** must be stored in a file
-- The currency is displayed in the format up to the 6th decimal place (inclusive).
-- The database and application must run in docker. (OPTIONAL (increased complexity): docker-compose).
+- The currency is displayed in the format up to the **6th decimal place** (inclusive)
+- The database and application must run in **docker**. (OPTIONAL (increased complexity): docker-compose)
+
 
 **Initial data:**
 - **Secret key** is saved to database from file.
 - **Commissions** are created and inserted into database for each currency pair (taken from Central Bank's API).
 - **Accounts** are created and inserted into database for each currency with some initial balance.
+
 
 **Commands:**
 - GET | **http://localhost:8080/api/convert?from=USD&to=UZS&amount=100**
@@ -46,7 +51,11 @@
 
 **Instruction to run the project:**
 - Clone the repository with the following git command:
-```git clone https://github.com/laziz511/Uzum-Final-Task```
+```
+git clone https://github.com/laziz511/Uzum-Final-Task
+```
 
 - In the project folder, run the project with the following docker command:
-```docker-compose up --build```
+```
+docker-compose up --build
+```
