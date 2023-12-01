@@ -1,13 +1,13 @@
 # Currency Converter
 
 
-**Task:**
+### Task:
 - Write a currency converter.
 - It must convert the currency taking into account the current exchange rate (for the day) and the agent commission.
 
 
 
-**Project requirements:**
+### **Project requirements:**
 - As a source of currency data, following sources are used:
     - https://cbu.uz/ru/arkhiv-kursov-valyut/
     - https://cbu.uz/ru/arkhiv-kursov-valyut/json/all/2023-12-01/
