@@ -40,7 +40,7 @@
 - GET | **http://localhost:8080/api/officialrates?date=2023-11-30&pair=USD/RUB**
     - Returns the **official Central Bank** rate on the desired day for the desired currency pair.
       
-- POST | **http://localhost:8080/api/convert**  {"from":"USD","to":"AED", "amount": "3333"}
+- POST | **http://localhost:8080/api/convert** | Header: {"Secret-Key": "a@h62HekGws2451mngGsi97f2sg4"}, Body: {"from":"USD","to":"AED", "amount": "3333"} 
     - Performs currency conversion. Debits money from accounts in the currency we issue, charges the currency we accept and additional commissions.
     - If there is not enough money to issue, the conversion is not performed and an error message is returned in **JSON** format and code **403**.
     - If such currency does not exist, returns error message in **JSON** format with the status code **404**.
