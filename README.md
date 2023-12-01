@@ -1,13 +1,13 @@
-# Currency Converter
+## Currency Converter
 
 
-### Task:
+### *Task:*
 - Write a currency converter.
 - It must convert the currency taking into account the current exchange rate (for the day) and the agent commission.
 
 
 
-### **Project requirements:**
+### *Project requirements:*
 - As a source of currency data, following sources are used:
     - https://cbu.uz/ru/arkhiv-kursov-valyut/
     - https://cbu.uz/ru/arkhiv-kursov-valyut/json/all/2023-12-01/
@@ -21,13 +21,13 @@
 - The database and application must run in **docker**. (OPTIONAL (increased complexity): docker-compose)
 
 
-**Initial data:**
+### *Initial data:*
 - **Secret key** is saved to database from file.
 - **Commissions** are created and inserted into database for each currency pair (taken from Central Bank's API).
 - **Accounts** are created and inserted into database for each currency with some initial balance.
 
 
-**Commands:**
+### *Commands:*
 - GET | **http://localhost:8080/api/convert?from=USD&to=UZS&amount=100**
     - Returns the amount of currency that the user will receive after conversion (but does not perform the conversion).
     - Currency is transferred from '**from**' to '**to**', taking into account the current exchange rate and the deduction of an agent commission for each conversion.
@@ -50,7 +50,7 @@
     - If the pair does not exist, returns error message in **JSON** format with the status code **404**.
     - The method must check for the presence of a secret key in the header. If the key does not match the secret key, returns error message in **JSON** format with the status code **403**.
 
-**Instruction to run the project:**
+### *Instruction to run the project:*
 - Clone the repository with the following git command:
 ```
 git clone https://github.com/laziz511/Uzum-Final-Task
